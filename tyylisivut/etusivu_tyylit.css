@@ -256,8 +256,21 @@ a {
         font-size: small;
     }
 
+    .arvostelut-container {
+        flex-direction: column;
+    }
+
+    .arvostelut-container ul {
+        max-width: 100%; 
+        margin: 0 0;
+        }
+
     #arvostelut-h1 {
         font-size: large;
+    }
+    
+    .sektio1, .arvostelut, .sektio3 {
+        width: 100%;
     }
 }
 
