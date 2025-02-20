@@ -195,3 +195,10 @@ p {
         font-size: medium;
     }
 }
+
+@media screen and (max-width: 500px) {
+
+    .sarake {
+        font-size: small;
+    }
+}
