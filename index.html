@@ -1,171 +1,263 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.00">
-        <link rel="stylesheet" href="tyylisivut/etusivu_tyylit.css">
-        <title>
-            Harjoitustyö
-        </title>
-    </head>
-    <body>
+* {
+    box-sizing:border-box;
+    }
+    
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(212, 129, 73);
+}
 
-        <!-- TÄSSÄ NAVIGAATIO PALKIN KOODI-->
-        
-        <div id="navbar">
-            <div>
-                <img src="kuvat/tavarataivas.png" alt="tavarataivas logo" class="navbar-kuva">
-            </div>
-            <div class="linkit">
-                <div class="sarake active-sarake">
-                    <a href="etusivu.html">
-                        <p>ETUSIVU</p>
-                    </a>
-                </div>
-                <div class="sarake">
-                    <a href="sivut/tuotteet.html">
-                        <p>TUOTTEET</p>
-                    </a>
-                </div>
-                <div class="sarake">
-                    <a href="sivut/palaute.html">
-                        <p>PALAUTE</p>
-                    </a>
-                </div>
-            </div>
-            <a href="sivut/ostoskori.html">
-                <img src="kuvat/shopping-cart.png" alt="Kuva kauppakärryistä" class="navbar-kuva" id="shopping-cart">
-            </a>
-        </div>
+#navbar {
+    display: flex;
+    background-color: red;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 60px;
+    justify-content: space-between;
+    border-bottom: solid 1px;
+    border-color: rgb(255, 153, 0);
+}
 
-        <!-- NAVIGAATIO PALKIN KOODI LOPPUU-->
+a {
+    text-decoration: none;
+    color: rgb(255, 153, 0);
+}
 
-        <!--- ETUSIVUKUVA-->
-        <img src="kuvat/etusivukuva.jpg" id="etusivukuva">
-        
-        <h1 id="quote">"TAVARATAIVAS ON TAIVAITA TAVOITTELEVA KOTIMAINEN YRITYS"</h1>
+.sarake {
+    height: 100%;
+    width: 33%;
+    text-align: center;
+    font-style: italic;
+    color: rgb(255, 153, 0);
+    font-size:large;
+    font-weight: bold;
+    text-shadow: 0 0 20px gold;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
 
-        <!-- ENSIMMÄINEN TEKSTIKAPPALE ALKAA -->
-        <div class="sektio1">
-            <fieldset class="fieldi">
-                <div class="esittely">
-                    <div class="vasen-osa">
-                        <h1>MIKÄ IHMEEN TAVARATAIVAS?</h1>
-                        <fieldset class="fieldi field-teksti">
-                            <div class="teksti-osa">
-                                <p>Tervetuloa Tavarataivaaseen – verkkokauppaan, jossa laatu, valikoima ja edullisuus kohtaavat!
-                                    Tavarataivas on vuonna 2012 perustettu verkkokauppa, joka tarjoaa laajan kattauksen tuotteita kaikkiin tarpeisiin, 
-                                    selaa siis valikoimaamme rohkeasti ja anna hetken viedä! Mutta varo! Tuotteemme ovat hyvin houkuttelevia ja sinulla on suuri
-                                    mahdollisuus tulla heräteostosten vietäväksi, olisi siis syytä jo valmiiksi kaivaa kuvetta esille ja
-                                    ottaa pankkikortti hollille! Lukuisat asiakkaat ovatkin jo arvostelleet verkkokauppaamme erittäin positiivisesti,
-                                    voitkin siis lukea alla olevia arvosteluja ja nähdä itse, kuinka suosittu yrityksemme onkaan!
-                                    <br>
-                                    Meiltä löydät kaiken yhdestä paikasta helposti ja vaivattomasti.
-                                    Verkkokauppamme on suunniteltu asiakaslähtöisesti, jotta ostaminen olisi sujuvaa ja mutkatonta. 
-                                    Nopeat toimitukset, monipuoliset maksuvaihtoehdot ja ystävällinen asiakaspalvelu tekevät ostokokemuksesta
-                                    miellyttävän. Tavarataivas seuraa jatkuvasti trendejä ja laajentaa valikoimaansa, jotta voimme tarjota 
-                                    asiakkaillemme aina ajankohtaisimmat ja halutuimmat tuotteet.
-                                    Tauno Mursuvaaran johtamana Tavarataivas panostaa laatuun, luotettavuuteen ja ensiluokkaiseen palveluun.
-                                    Me uskomme, että verkkokaupassa asioinnin tulee olla helppoa ja turvallista – ja siksi kehitämme 
-                                    toimintaamme jatkuvasti asiakkaidemme tarpeita kuunnellen.
-                                    Tule ja tutustu Tavarataivaan maailmaan – meiltä löydät kaiken, mitä tarvitset ja astut samalla taivaisiin!
-                                            </p>
-                            </div>
-                        </fieldset>
-                    </div>
-                    <div class="kuva-osa">
-                        <img src="kuvat/tavarataivas.png" id="kuva1">
-                    </div> 
-                </div>
-                <p id="huomio">Huom! Tällä sivustolla ei ole mitään tekemistä <a href="https://tavarataivas.fi/" target="_blank">tavarataivas.fi</a> kanssa!</p>   
-            </fieldset>
-        </div>
-        <!-- ENSIMMÄINEN TEKSTIKAPPALE PÄÄTTYY -->
+.active-sarake {
+    background-color: rgb(250, 90, 90);
+}
 
+.navbar-kuva {
+    height: 100%;
+    margin: 0;
+    width: auto;
+}
 
-        <!-- ASIAKASARVOSTELU OSA ALKAA -->
+#shopping-cart {
+    border-radius: 25%;
+    height: 90%;
+}
 
-        <div class="arvostelut">
-                <fieldset class="fieldi">
-                    <img src="kuvat/tahdet.png" class="keskelle" id="tahdet">
-                    <h1 id="arvostelut-h1">ASIAKASARVOSTELUITA</h1>
-                    <div class="arvostelut-container">
-                        <ul>
-                            <li class="arvostelu">"Tämä on kyllä huippu sivu! Suosittelen!"</li>
-                            <li class="arvostelu">"Sain mitä tilasin ja toimitus oli nopea, kiitos!"</li>
-                            <li class="arvostelu">"Halvat hinnat ja hyvä palvelu!"</li>
-                            <li class="arvostelu">"Paras nettisivu mitä tiedän!"</li>
-                            <li class="arvostelu">"Valikoimasta löytyy kaikkea mitä tarvitsen!"</li>
-                            <li class="arvostelu">"Sivusto on selkeä ja helppokäyttöinen!"</li>
-                            <li class="arvostelu">"Täällä on loistava valikoima ja nopea palvelu."</li>
-                            <li class="arvostelu">"Visuaalinen ilme on todella tyylikäs ja moderni."</li>
-                            <li class="arvostelu">"Löysin nopeasti etsimäni – todella käyttäjäystävällinen!"</li>
-                            <li class="arvostelu">"Tämä sivu on todellinen aarre – löydän aina halpoja tuotteita!"</li>
-                        </ul>
+#shopping-cart:hover {
+    height: 100%;
+    width: auto;
+    margin: auto;
+}
 
-                        <ul>
-                            <li class="arvostelu">"Tämä sivusto on todella helppokäyttöinen ja nopea!"</li>
-                            <li class="arvostelu">"Asiakaspalvelu vastasi nopeasti ja oli todella avulias!"</li>
-                            <li class="arvostelu">"Löysin juuri sen, mitä etsin – todella kattava valikoima!"</li>
-                            <li class="arvostelu">"Sivuston navigointi on vaivatonta, eikä tarvitse etsiä pitkään!"</li>
-                            <li class="arvostelu">"Tilasin ja tuote tuli nopeasti – suosittelen ehdottomasti!"</li>
-                            <li class="arvostelu">"Visuaalisesti upea ja toimiva kokonaisuus!"</li>
-                            <li class="arvostelu">"Erinomainen hinta-laatusuhde – todella tyytyväinen!"</li>
-                            <li class="arvostelu">"Tämä sivu on todella luotettava ja helppo käyttää!"</li>
-                            <li class="arvostelu">"Kaikki tarvittava löytyy yhdestä paikasta, superkätevä!"</li>
-                            <li class="arvostelu">"Ehdottomasti suosikkisivuni – nopea, luotettava ja käyttäjäystävällinen!"</li>
-                        </ul>
+.linkit {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    margin: 0 auto;
+    justify-content: center;
+}
 
-                        <ul>
-                            <li class="arvostelu">"Sivusto on todella nopea ja tehokas!"</li>
-                            <li class="arvostelu">"Asiakaspalvelu on ystävällistä ja ratkaisee ongelmat nopeasti!"</li>
-                            <li class="arvostelu">"Erinomainen käyttökokemus, kaikki on selkeästi esillä!"</li>
-                            <li class="arvostelu">"Tämä on yksi parhaista verkkosivustoista, joita olen käyttänyt!"</li>
-                            <li class="arvostelu">"Hyvä valikoima ja loistava hinnanlaatu - suosittelen!"</li>
-                            <li class="arvostelu">"Sivuston käyttöliittymä on todella moderni ja helppo navigoida." </li>
-                            <li class="arvostelu">"Nopea toimitus ja luotettava palvelu – ei voi olla parempaa!"</li>
-                            <li class="arvostelu">"Sivusto on intuitiivinen ja helppokäyttöinen, löysin nopeasti etsimäni!"</li>
-                            <li class="arvostelu">"Sivuston design on kaunis ja miellyttävä käyttää!"</li>
-                            <li class="arvostelu">"Suosittelen lämpimästi tätä sivua – loistavaa asiakaspalvelua ja laadukkaita tuotteita!"</li>
-                        </ul>
-                    </div>
+.sarake:hover {
+    background-color: beige;
+}
 
-                </fieldset>
-            </div>
+#etusivukuva {
+    width: 100%;
+    height: 700px;
+}
 
-        <!-- ASIAKASARVOSTELU OSA PÄÄTTYY -->
+.esittely {
+    height: auto;
+    display: flex;
+    margin: 20px auto;
+}
 
+.vasen-osa {
+    width: 50%;
+    margin: auto;
+} 
 
-        <!-- YRITYKSEN PERUSTAJA OSA ALKAA -->
-        <div class="sektio3">
-            <fieldset class="fieldi">
-                <h1>Yrityksen perustaja, Tauno Mursuvaara</h1>
-                <h1></h1>
-                <div class="ceo">
-                    <div class="bio">
-                        <fieldset class="fieldi field-teksti">
-                            <p>Tauno ei ollut tavanomainen nuori mies. Hänellä oli suuri unelma: tarjota ihmisille laadukkaita tuotteita, 
-                                jotka tekisivät arjesta helpompaa ja hauskempaa – mutta ei millään tavallisella tavalla. Hän halusi luoda paikan,
-                                jonne asiakkaat voisivat astua kuin taivaaseen – paikkaan, jossa kaikki tarpeellinen löytyy yhdestä ja samasta paikasta, 
-                                ja jossa valikoima on niin laaja, että sitä voi kutsua taivaalliseksi. Vuonna 2012, lähes sattumalta ja loputtoman 
-                                päättäväisyyden myötä, Tauno perusti verkkokaupan nimeltä "Tavarataivas". Alku oli kova. Verkkosivut oli rakennettu omilla 
-                                käsillä, ja ensimmäiset varastotilat olivat pienessä autotallissa, jossa Tauno itse paketoi tilaukset ja kiikutti ne postiin.
-                                Tavarataivas sai nopeasti suosiota, sillä Tauno oli päättänyt, että asiakaspalvelu olisi kunnia-asia. Hän vastasi itse kaikkiin 
-                                asiakaskyselyihin ja pyrki aina ylittämään asiakkaidensa odotukset. Tuotteet olivat huolellisesti valikoituja ja niiden laatuun
-                                oli satsattu, ja Tauno ei koskaan halunnut myydä mitään, mitä hän ei itse käyttäisi. Vuosi vuodelta Tavarataivas kasvoi, nykään se 
-                                on jo vakavasti otettava toimija alalla. Se tarjoaa laajan valikoiman kaikkea tarvittavaa. Tavarataivas ei ole vain verkkokauppa. Se
-                                on Tauno Mursuvaaran visio, joka on muuttunut todellisuudeksi. Tämä on tarina siitä, miten pieni unelma voi kasvaa suureksi ja tuottaa 
-                                valtavasti iloa.
-                            </p>
-                        </fieldset>
-                    </div>
-                    <div class="kuva-osa">
-                        <img src="kuvat/tauno.png" id="johtaja">
-                    </div>
-                </div>
-            </fieldset>
-        </div>
+.vasen-osa h1, .sektio3 h1, .arvostelut h1 {
+    text-align: center;
+    font-style: italic;
+    color: rgb(0, 0, 0);
+    font-size:xx-large;
+    font-weight: bold;
+    text-shadow: 0 0 20px gold;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-decoration: underline;
+}
 
-        <!-- YRITYKSEN PERUSTAJA OSA ALKAA -->
-    </body>
-</html>
+.teksti-osa {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    font-size: large;
+}
+
+.kuva-osa {
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#kuva1 {
+    border-radius: 30%;
+    width: 90%;
+    height: auto;
+    margin: auto;
+}
+
+.sektio1 {
+    width: 75%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.fieldi {
+    background-color: rgb(255, 198, 133);
+    border-color: rgb(255, 153, 0);
+}
+
+#quote {
+    font-style: italic;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    width: 100%;
+    background-color: red;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    color: rgb(255, 153, 0);
+    text-shadow: gold;
+}
+
+#kuva2 {
+    width: 100%;
+    height: auto;
+}
+
+.arvostelut {
+    width: 75%;
+    height: auto;
+    background-color: rgb(255, 198, 133);
+    margin: auto;
+}
+
+.keskelle {
+    margin: auto;
+    display: flex;
+    text-align: center;
+}
+
+#tahdet {
+    width: 100%;
+}
+
+#arvostelut-h1 {
+    text-align: center;
+    text-decoration: underline;
+    font-style: italic;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.arvostelu {
+    margin: 10px 0px;
+    font-style: italic;
+}
+
+.arvostelut-container {
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.arvostelut-container ul {
+    max-width: 30%;
+}
+
+.ceo {
+    display: flex;
+    background-color: rgb(255, 198, 133);
+    margin: auto;
+    justify-content: space-around;
+}
+
+.sektio3 {
+    height: auto;
+    width: 75%;
+    margin: 20px auto;
+}
+
+#johtaja {
+    border-radius: 50%;
+    height: 30vw;
+    width: auto;
+
+}
+
+.bio {
+    width: 40%;
+}
+
+.bio p {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+}
+
+.field-teksti {
+    background-color: rgb(255, 218, 176)
+}
+
+#huomio {
+    font-size: x-large;
+    color: red;
+    text-decoration: underline;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+
+    .sarake {
+        font-size: large;
+    }
+
+    .arvostelut-container {
+        flex-direction: column;
+    }
+
+    .arvostelut-container ul {
+        max-width: 100%; 
+        margin: 0 0;
+        }
+
+    #arvostelut-h1 {
+        font-size: x-large;
+    }
+    
+    .sektio1, .arvostelut, .sektio3 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .sarake {
+        font-size: small;
+    }
+
+    #arvostelut-h1 {
+        font-size: large;
+    }
+}
+
