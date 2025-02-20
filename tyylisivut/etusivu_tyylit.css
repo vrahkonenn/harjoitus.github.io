@@ -27,7 +27,7 @@ a {
 
 .sarake {
     height: 100%;
-    width: 10%;
+    width: 33%;
     text-align: center;
     font-style: italic;
     color: rgb(255, 153, 0);
@@ -87,7 +87,7 @@ a {
     margin: auto;
 } 
 
-.vasen-osa h1, .bio h1, .arvostelut h1 {
+.vasen-osa h1, .sektio3 h1, .arvostelut h1 {
     text-align: center;
     font-style: italic;
     color: rgb(0, 0, 0);
@@ -161,7 +161,7 @@ a {
 }
 
 #tahdet {
-    width: 80%;
+    width: 100%;
 }
 
 #arvostelut-h1 {
@@ -172,13 +172,18 @@ a {
 }
 
 .arvostelu {
-    margin: 10px 0;
+    margin: 10px 0px;
     font-style: italic;
 }
 
 .arvostelut-container {
     height: auto;
     display: flex;
+    justify-content: space-around;
+}
+
+.arvostelut-container ul {
+    max-width: 30%;
 }
 
 .ceo {
@@ -220,4 +225,25 @@ a {
     text-decoration: underline;
     font-weight: bold;
     text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+
+    .sarake {
+        font-size: medium;
+    }
+
+    .arvostelut-container {
+        flex-direction: column;
+    }
+
+    .arvostelut-container ul {
+        max-width: 100%; 
+        margin: 0 0;
+    }
+
+    #arvostelut-h1 {
+        font-size: x-large;
+    }
+    
 }
