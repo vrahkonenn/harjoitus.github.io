@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../tyylisivut/tuotesivu_tyylit.css">
+        <title>
+            Harjoitustyö
+        </title>
+    </head>
+    <body>
+
+        <!-- TÄSSÄ NAVIGAATIO PALKIN KOODI-->
+
+        <div id="navbar">
+            <div>
+                <img src="../kuvat/tavarataivas.png" alt="tavarataivas logo" class="navbar-kuva">
+            </div>
+            <div class="linkit">
+                <div class="sarake">
+                    <a href="../index.html">
+                        <p>ETUSIVU<p>
+                    </a>
+                </div>
+                <div class="sarake active-sarake">
+                    <a href="tuotteet.html">
+                        <p>TUOTTEET</p>
+                    </a>
+                </div>
+                <div class="sarake">
+                    <a href="palaute.html">
+                        <p>PALAUTE</p>
+                    </a>
+                </div>
+            </div>
+                <a href="ostoskori.html">
+                    <img src="../kuvat/shopping-cart.png" alt="Kuva kauppakärryistä" class="navbar-kuva" id="shopping-cart"> 
+                </a>    
+        </div>
+
+        <!-- NAVIGAATIO PALKIN KOODI LOPPUU-->
+
+        <div id="tayte"></div>
+        <!-- TUOTTEET ALKAA-->
+        <div id="tausta">
+            <h1 id="tuote-h1">TUOTTEET</h1>
+
+            <!-- RIVI 1 ALKAA -->
+            <div class="rivi">
+
+                <div class="tuote-container">
+                    <img src="../kuvat/maito.png" class="kuva">
+                    <div class="ala-osa">
+                        <p>Maito: 3,45€/kpl</p>
+                            <div class="osto">
+                                <button onclick="muuta_tuote_amount('maito_amount', getElementById('maito_amount').value, -1);">-</button>
+                                <input class="input-field" value="0" id="maito_amount">
+                                <button onclick="muuta_tuote_amount('maito_amount', getElementById('maito_amount').value, 1);">+</button>
+                            </div>
+                            <button class="lisaa-koriin" onclick="lisaa_koriin('maito', '3.45', getElementById('maito_amount').value);"><img src="../kuvat/shopping-cart.png" width="100%"></button>
+                    </div>
+                </div>
+
+                <div class="tuote-container">
+                    <img src="../kuvat/kivi.png" class="kuva">
+                    <div class="ala-osa">
+                        <p>Kivi: 99,95€/kpl</p>
+                        <div class="osto">
+                            <button onclick="muuta_tuote_amount('kivi_amount', getElementById('kivi_amount').value, -1);">-</button>
+                            <input class="input-field" value="0" id="kivi_amount">
+                            <button onclick="muuta_tuote_amount('kivi_amount', getElementById('kivi_amount').value, 1);">+</button>     
+                        </div>
+                        <button class="lisaa-koriin" onclick="lisaa_koriin('kivi', '99.95', getElementById('kivi_amount').value);"><img src="../kuvat/shopping-cart.png" width="100%"></button>          
+                    </div>
+                </div>
+
+                <div class="tuote-container">
+                    <img src="../kuvat/puhelin.png" class="kuva">
+                    <div class="ala-osa">
+                        <p>Puhelin: 12,30€/kpl</p>
+                        <div class="osto">
+                            <button onclick="muuta_tuote_amount('puhelin_amount', getElementById('puhelin_amount').value, -1);">-</button>
+                            <input class="input-field" value="0" id="puhelin_amount">
+                            <button onclick="muuta_tuote_amount('puhelin_amount', getElementById('puhelin_amount').value, 1);">+</button>     
+                        </div>
+                        <button class="lisaa-koriin" onclick="lisaa_koriin('puhelin', '12.30', getElementById('puhelin_amount').value);"><img src="../kuvat/shopping-cart.png" width="100%"></button>                    </div>
+                </div>
+            </div>
+            <!-- RIVI 1 PÄÄTTYY -->
+ 
+            <!-- RIVI 2 ALKAA -->
+            <div class="rivi">
+
+                <div class="tuote-container">
+                    <img src="../kuvat/kalja.png" class="kuva">
+                    <div class="ala-osa">
+                        <p>Kalja 5,00€/kpl</p>
+                            <div class="osto">
+                                <button onclick="muuta_tuote_amount('kalja_amount', getElementById('kalja_amount').value, -1);">-</button>
+                                <input class="input-field" value="0" id="kalja_amount">
+                                <button onclick="muuta_tuote_amount('kalja_amount', getElementById('kalja_amount').value, 1);">+</button>
+                            </div>
+                            <button class="lisaa-koriin" onclick="lisaa_koriin('kalja', '5.00', getElementById('kalja_amount').value);"><img src="../kuvat/shopping-cart.png" width="100%"></button>
+                    </div>
+                </div>
+
+                <div class="tuote-container">
+                    <img src="../kuvat/viivoitin.png" class="kuva">
+                    <div class="ala-osa">
+                        <p>Viivoitin 0,50€/kpl</p>
+                        <div class="osto">
+                            <button onclick="muuta_tuote_amount('viivoitin_amount', getElementById('viivoitin_amount').value, -1);">-</button>
+                            <input class="input-field" value="0" id="viivoitin_amount">
+                            <button onclick="muuta_tuote_amount('viivoitin_amount', getElementById('viivoitin_amount').value, 1);">+</button>     
+                        </div>
+                        <button class="lisaa-koriin" onclick="lisaa_koriin('viivoitin', '0.50', getElementById('viivoitin_amount').value);"><img src="../kuvat/shopping-cart.png" width="100%"></button>
+                    </div>
+                </div>
+
+                <div class="tuote-container">
+                    <img src="../kuvat/makkaraperunat.png" class="kuva">
+                    <div class="ala-osa">
+                        <p>Taksari: 1,00€/kpl</p>
+                        <div class="osto">
+                            <button onclick="muuta_tuote_amount('taksari_amount', getElementById('taksari_amount').value, -1);">-</button>
+                            <input class="input-field" value="0" id="taksari_amount">
+                            <button onclick="muuta_tuote_amount('taksari_amount', getElementById('taksari_amount').value, 1);">+</button>     
+                        </div>
+                        <button class="lisaa-koriin" onclick="lisaa_koriin('taksari', '1.00', getElementById('taksari_amount').value);"><img src="../kuvat/shopping-cart.png" width="100%"></button>
+                    </div>
+                </div>
+            </div>
+            <!-- RIVI 2 PÄÄTTYY -->
+
+            <!-- RIVI 3 ALKAA -->
+
+            <div class="rivi">
+
+                <div class="tuote-container">
+                    <img src="../kuvat/auto.png" class="kuva">
+                    <div class="ala-osa">
+                        <p>Auto: 12 000€/kpl</p>
+                            <div class="osto">
+                                <button onclick="muuta_tuote_amount('auto_amount', getElementById('auto_amount').value, -1);">-</button>
+                                <input class="input-field" value="0" id="auto_amount">
+                                <button onclick="muuta_tuote_amount('auto_amount', getElementById('auto_amount').value, 1);">+</button>
+                            </div>
+                            <button class="lisaa-koriin" onclick="lisaa_koriin('auto', '12000', getElementById('auto_amount').value);"><img src="../kuvat/shopping-cart.png" width="100%"></button>
+                    </div>
+                </div>
+
+                <div class="tuote-container">
+                    <img src="../kuvat/gorillasohva.png" class="kuva">
+                    <div class="ala-osa">
+                        <p>Gorilla sohva: 7500€/kpl</p>
+                        <div class="osto">
+                            <button onclick="muuta_tuote_amount('sohva_amount', getElementById('sohva_amount').value, -1);">-</button>
+                            <input class="input-field" value="0" id="sohva_amount">
+                            <button onclick="muuta_tuote_amount('sohva_amount', getElementById('sohva_amount').value, 1);">+</button>     
+                        </div>
+                        <button class="lisaa-koriin" onclick="lisaa_koriin('sohva', '7500', getElementById('sohva_amount').value);"><img src="../kuvat/shopping-cart.png" width="100%"></button>
+                    </div>
+                </div>
+
+                <div class="tuote-container">
+                    <img src="../kuvat/lamppu.png" class="kuva">
+                    <div class="ala-osa">
+                        <p>Katto lamppu 50,00€/kpl</p>
+                        <div class="osto">
+                            <button onclick="muuta_tuote_amount('lamppu_amount', getElementById('lamppu_amount').value, -1);">-</button>
+                            <input class="input-field" value="0" id="lamppu_amount">
+                            <button onclick="muuta_tuote_amount('lamppu_amount', getElementById('lamppu_amount').value, 1);">+</button>     
+                        </div>
+                        <button class="lisaa-koriin" onclick="lisaa_koriin('lamppu', '50.00', getElementById('lamppu_amount').value);"><img src="../kuvat/shopping-cart.png" width="100%"></button>
+                    </div>
+                </div>
+            </div>
+            <!-- RIVI 3 PÄÄTTYY -->
+
+
+        
+        </div>
+
+        <script src="../skriptit.js">
+        </script>
+    </body>
+</html>

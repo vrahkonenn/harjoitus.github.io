@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../tyylisivut/palaute_tyylit.css">
+        <title>
+            Harjoitustyö
+        </title>
+    </head>
+    <body>
+
+        <!-- TÄSSÄ NAVIGAATIO PALKIN KOODI-->
+        
+        <div id="navbar">
+            <div>
+                <img src="../kuvat/tavarataivas.png" alt="tavarataivas logo" class="navbar-kuva">
+            </div>
+            <div class="linkit">
+                <div class="sarake">
+                    <a href="../index.html">
+                        <p>ETUSIVU</p>
+                    </a>
+                </div>
+                <div class="sarake">
+                    <a href="tuotteet.html">
+                        <p>TUOTTEET</p>
+                    </a>
+                </div>
+                <div class="sarake active-sarake">
+                    <a href="palaute.html">
+                        <p>PALAUTE</p>
+                    </a>
+                </div>
+            </div>
+            <a href="ostoskori.html">
+                <img src="../kuvat/shopping-cart.png" alt="Kuva kauppakärryistä" class="navbar-kuva" id="shopping-cart">
+            </a>
+        </div>
+
+        <!-- NAVIGAATIO PALKIN KOODI LOPPUU-->
+        
+        <div id="tausta">
+            <div id="tayte"></div>
+            <h1>PALAUTESIVU</h1>
+            <hr class="iso">
+            <div class="ohjeteksti">
+                <p>Tälle sivulle voit antaa rehellistä ja suoraa palautetta. Palaute voi olla positiivista tai negatiivista,
+                    vaikkakaan mitään negatiivista sanottavaa sinulla ei varmasti ole. Avoimen palautteen lisäksi voit arvostella kokemuksesi
+                    palveluistamme asteikolla 1-5 alla olevia nappeja käyttäen. Tuhannet asiakkaat ovatkin jo täyttäneet oman arvostelunsa, joista
+                    parhaat ovat otettu etusivulle esille. Voitkin sieltä vaikka lukaista muutaman, mikäli et ole sitä jo tehnyt! Täytä rohkeasti tiedot 
+                    alla oleviin kenttiin ja kerro miten onnistuimme!</p>
+                <p>Ja mainittakoon vielä, että kuukausittain jokaisen arvostelijan kesken arvotaan yksi maitopurkki, joten yhteystietosi on jätettävä arvostelun
+                    yhteydessä, jotta voimme olla voittajiin yhteydessä!</p>
+                </p>
+            </div>
+            <hr class="iso">
+            <h1>Syötä tiedot alla oleviin kenttiin!</h1>
+            <hr class="pieni">
+            <form action="https://formspree.io/f/xwpvyewd" method="POST">
+                <div class="palaute-osa" id="henkilotiedot">
+                    <div class="rivi">
+                        <label for="etunimi">Etunimet:</label>
+                        <input id="etunimi" placeholder="Teppo" type="text" name="etunimi">
+                        <label for="sukunimi">Sukunimi:</label>
+                        <input id="sukunimi" placeholder="Tulppu" type="text" name="sukunimi">
+                    </div>
+                    <div class="rivi">
+                        <label for="puh">Puhelinnumero:</label>
+                        <input id="puhelin" placeholder="+358 465 7807" type="text" name="puh">
+                        <label for="sposti">Sähköposti:</label>
+                        <input id="sposti" placeholder="teppotulppu@gmail.com" type="email" name="sposti">
+                    </div>
+                </div>
+            
+
+                <hr class="pieni">
+
+                <div class="palaute-osa">
+                    <p>Miten onnistuimme? (asteikolla 1-5)</p>
+                    <div class="buttonit">
+                        <label for="1">1</label>
+                        <input type="radio" id="1" name="radio" value="1">
+                        <label for="1">2</label>
+                        <input type="radio" id="2" name="radio" value="2">
+                        <label for="1">3</label>
+                        <input type="radio" id="3" name="radio" value="3">
+                        <label for="1">4</label>
+                        <input type="radio" id="4" name="radio" value="4">
+                        <label for="1">5</label>
+                        <input type="radio" id="5" checked name="radio" value="5">
+                    </div>
+                    <p>Avoin palaute:</p>
+                    <textarea id="avoin-palaute" name="palaute" placeholder="On kyllä laaja valikoima edullisia tuotteita, olen hämmästynyt myös sivun visuaalisesta ilmeestä..."></textarea>
+                </div>
+                <div id="submit">
+                    <label for="hyvaksy">Hyväksyn tietojeni käyttämisen ja tallentamisen</label>
+                    <input type="checkbox" id="hyvaksy">
+                    <br>
+                    <button type="submit" id="nappi">LÄHETÄ</button>
+                </div>
+            </form>
+            <hr class="pieni">
+            <br>
+
+    </body>
+</html>

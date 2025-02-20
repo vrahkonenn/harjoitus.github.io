@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(212, 129, 73);
+}
+
+#navbar {
+    display: flex;
+    background-color: red;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 60px;
+    justify-content: space-between;
+    border-bottom: solid 1px;
+    border-color: rgb(255, 153, 0);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 153, 0);
+}
+
+.sarake {
+    height: 100%;
+    width: 10%;
+    text-align: center;
+    font-style: italic;
+    color: rgb(255, 153, 0);
+    font-size:large;
+    font-weight: bold;
+    text-shadow: 0 0 20px gold;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.active-sarake {
+    background-color: rgb(250, 90, 90);
+}
+
+.navbar-kuva {
+    height: 100%;
+    margin: 0;
+    width: auto;
+}
+
+#shopping-cart {
+    border-radius: 25%;
+    height: 90%;
+}
+
+#shopping-cart:hover {
+    height: 100%;
+    width: auto;
+    margin: auto;
+}
+
+.linkit {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.sarake:hover {
+    background-color: beige;
+}
+
+#tayte {
+    width: 100%;
+    height: 100px;
+}
+
+#tausta {
+    width: 80%;
+    height: auto;
+    background-color: rgb(255, 198, 133);
+    margin: auto;
+    border-radius: 10px;
+}
+
+#tausta h1 {
+    text-align: center;
+    font-style: italic;
+    color: rgb(0, 0, 0);
+    font-size:xx-large;
+    font-weight: bold;
+    text-shadow: 0 0 20px gold;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-decoration: underline;
+}
+
+.iso {
+    width: 90%;
+    border: 1px solid;
+    border-color: black;
+}
+
+.pieni {
+    width: 60%;
+    border: 1px solid;
+    border-color: black;
+}
+
+.ohjeteksti {
+    width: 70%;
+    margin: 20px auto;
+    text-align: center;
+    font-size: large;
+}
+
+.rivi {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px auto;
+}
+
+.rivi label {
+    width: 25%;
+    text-align: center;
+}
+
+.rivi input {
+    width: 140px;
+}
+
+.palaute-osa {
+    width: 50%;
+    margin: 30px auto;
+}
+
+.palaute-osa p {
+    text-align: center;
+}
+
+.buttonit {
+    justify-content: center;
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.buttonit input {
+    margin-right: 30px;
+}
+
+#avoin-palaute {
+    width: 100%;
+    height: 300px;
+}
+
+#submit {
+    text-align: center;
+}
+
+#nappi {
+    margin: 20px;
+    width: 100px;
+    height: 50px;
+    border-radius: 10%;
+}

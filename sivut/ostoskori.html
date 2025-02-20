@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../tyylisivut/ostoskori_tyylit.css">
+        <title>
+            Harjoitustyö
+        </title>
+    </head>
+    <body onload="paivitaKori(); paivitaYhteensa();">
+
+        <!-- TÄSSÄ NAVIGAATIO PALKIN KOODI-->
+
+        <div id="navbar">
+            <div>
+                <img src="../kuvat/tavarataivas.png" alt="tavarataivas logo" class="navbar-kuva">
+            </div>
+            <div class="linkit">
+                <div class="sarake">
+                    <a href="../index.html">
+                        <p>ETUSIVU</p>
+                    </a>
+                </div>
+                <div class="sarake">
+                    <a href="tuotteet.html">
+                        <p>TUOTTEET</p>
+                    </a>
+                </div>
+                <div class="sarake">
+                    <a href="palaute.html">
+                        <p>PALAUTE</p>
+                    </a>
+                </div>
+            </div>
+            <a href="ostoskori.html">
+                <img src="../kuvat/shopping-cart.png" alt="Kuva kauppakärryistä" class="navbar-kuva" id="shopping-cart">
+            </a>
+        </div>
+
+        <!-- NAVIGAATIO PALKIN KOODI LOPPUU-->
+
+        <div id="tayte"></div>
+
+        <div id="tausta">
+            <h1 id="otsikko">OSTOSKORI</h1>
+            <div class="sisältö" id="isodiv">
+                <div id="tuote_maito" class="tuote"></div>
+                <div id="tuote_kivi" class="tuote"></div>
+                <div id="tuote_puhelin" class="tuote"></div>
+                <div id="tuote_kalja" class="tuote"></div>
+                <div id="tuote_viivoitin" class="tuote"></div>
+                <div id="tuote_taksari" class="tuote"></div>
+                <div id="tuote_auto" class="tuote"></div>
+                <div id="tuote_sohva" class="tuote"></div>
+                <div id="tuote_lamppu" class="tuote"></div>
+
+                <div id="yhteensa" class="tuote"></div>
+                <div id="tyhja"></div>
+            </div>
+
+            <!-- OSTOSKORIN ALAPUOLELLA-->
+
+            <hr class="solid">
+            <h1 id="loppu">TILAUSTIEDOT</h1>
+            <p>Täytä tietosi alla oleviin kenttiin ja paina "Tilaa painiketta" vahvistaaksesi tilauksen.</p>
+            <p>Teille lähetetään sähköpostitse lasku myöhemmin</p>
+
+            <!-- SÄHKÖPOSTIIN LÄHETYS -->
+            <form action="https://formspree.io/f/xbldwrwr" method="POST">
+                <input name="Tilatut maidot" id="input-maito" type="hidden">
+                <input name="Tilatut kivet" id="input-kivi" type="hidden">
+                <input name="Tilatut puhelimet" id="input-puhelin" type="hidden">
+                <input name="Tilatut kaljat" id="input-kalja" type="hidden">
+                <input name="Tilatut viivoittimet" id="input-viivoitin" type="hidden">
+                <input name="Tilatut makkaraperunat" id="input-taksari" type="hidden">
+                <input name="Tilatut autot" id="input-auto" type="hidden">
+                <input name="Tilatut gorillasohvat" id="input-sohva" type="hidden">
+                <input name="Tilatut kattolamput" id="input-lamppu" type="hidden">
+                <div class="toimitustiedot">
+                    <div class="rivi">
+                        <label for="etunimi">Etunimi:</label>
+                        <input id="etunimi" name="Etunimi" placeholder="Matti">
+                        <label for="sukunimi">Sukunimi:</label>
+                        <input id="sukunimi" name="Sukunimi" placeholder="Makkara">
+                    </div>
+                    <div class="rivi">
+                        <label for="sposti">Sähköposti:</label>
+                        <input id="sposti" name="Sähköposti" placeholder="makkaramatti@gmail.com">
+                        <label for="puhnro">Puhelinnumero</label>
+                        <input id="puhnro" name="Puhelinnumero" placeholder="040 444 3456">
+                    </div>
+                    <div class="rivi">
+                        <label for="osoite">Toimitusosoite:</label>
+                        <input name="Toimitusosoite" id="osoite" placeholder="Tangalantie 12">
+                        <label for="maa">Maa:</label>
+                        <input name="Maa" id="maa" placeholder="Suomi">
+                    </div>
+                    <div class="rivi">
+                        <label for="postinumero">Postinumero:</label>
+                        <input id="postinumero" name="Postinumero" placeholder=54100">
+                        <label for="kaupunki">Kaupunki:</label>
+                        <input id="kaupunki" name="Kaupunki" placeholder="Tangala">
+                    </div>
+                    <div class="rivi">
+                    <button type="submit" id="nappi">TILAA</button>
+                    </div>
+                </div>
+            </form>
+            <hr class="solid">
+            <br>
+        </div>
+
+        
+        
+        <script src="../skriptit.js"></script>
+    </body>
+</html>
