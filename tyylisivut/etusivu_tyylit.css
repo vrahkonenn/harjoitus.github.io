@@ -230,7 +230,7 @@ a {
 @media screen and (max-width: 800px) {
 
     .sarake {
-        font-size: medium;
+        font-size: large;
     }
 
     .arvostelut-container {
@@ -240,10 +240,24 @@ a {
     .arvostelut-container ul {
         max-width: 100%; 
         margin: 0 0;
-    }
+        }
 
     #arvostelut-h1 {
         font-size: x-large;
     }
     
+    .sektio1, .arvostelut, .sektio3 {
+        width: 100%;
+    }
 }
+
+@media screen and (max-width: 500px) {
+    .sarake {
+        font-size: small;
+    }
+
+    #arvostelut-h1 {
+        font-size: large;
+    }
+}
+
