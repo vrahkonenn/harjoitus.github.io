@@ -280,7 +280,8 @@ p {
 
     .hinta {
         width: auto;
-        margin: auto 0;
+        text-align: left;
+
     }
 
     #tyhja {
