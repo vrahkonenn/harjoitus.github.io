@@ -284,4 +284,8 @@ p {
     .hinta {
         width: auto;
     }
+
+    #tyhja {
+    width: 100%;
+}
 }
