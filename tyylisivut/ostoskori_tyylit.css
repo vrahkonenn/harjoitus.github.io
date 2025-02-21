@@ -239,11 +239,10 @@ p {
 
     .tuote {
         height: 75px;
-        justify-content: left;
     }
 
     .tuote p {
-        font-size: small;
+        font-size:x-small
     }
 
     #filleri {
@@ -274,14 +273,16 @@ p {
 
     .tuotemaara {
         width: auto;
-        margin: auto 0;
+        margin: auto 0 auto 5px;
         text-align: left;
     }
 
     .hinta {
         width: auto;
         text-align: left;
+        flex-wrap: nowrap;
     }
+
 
     #tyhja {
         width: 100%;
