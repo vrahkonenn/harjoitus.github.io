@@ -189,14 +189,8 @@ p {
     text-align: center;
 }
 
+
 @media screen and (max-width: 800px) {
-
-    .sarake {
-        font-size: medium;
-    }
-}
-
-@media screen and (max-width: 500px) {
 
     .sarake {
         font-size: small;
@@ -242,5 +236,13 @@ p {
     h1 {
         width: 80%;
         margin: 0 auto;
+    }
+
+    #vihanaama {
+        max-width: 100%;
+    }
+
+    .tuote {
+        height: 75px;
     }
 }
