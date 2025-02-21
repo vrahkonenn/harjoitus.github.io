@@ -29,7 +29,7 @@ function paivitaHinta(hinta, maara, tuoteID, tuote) {
 
     let uusihinta = parseFloat(hinta)*parseInt(maara);
 
-    document.getElementById(tuoteID).innerHTML = uusihinta.toFixed(2) + " €";
+    document.getElementById(tuoteID).innerHTML = uusihinta.toFixed(2) + "€";
     paivitaYhteensa();
 }
 
