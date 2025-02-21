@@ -1,7 +1,3 @@
-* {
-    box-sizing:border-box;
-    }
-    
 body {
     margin: 0;
     padding: 0;
@@ -71,18 +67,86 @@ a {
     background-color: beige;
 }
 
-#etusivukuva {
+#tayte {
     width: 100%;
-    height: 500px;
+    height: 100px;
 }
 
-.esittely {
+#tausta {
+    width: 80%;
     height: auto;
-    display: flex;
-    margin: 20px auto;
+    background-color: rgb(255, 198, 133);
+    margin: auto;
+    border-radius: 10px;
 }
 
-.fieldi h1, .sektio3 h1, .arvostelut h1 {
+.sisältö {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    background-color: beige;
+    text-align: center;
+}
+
+.tuote {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid;
+    height: 100px;
+}
+
+.tuote:empty {
+    border: none;
+    height: 0px;
+}
+
+.tuotekuva {
+    border-right: 1px solid;
+}
+
+.tuote p, .tuotemaara {
+    margin: auto 0;
+    width: 20%;
+}
+
+.input-field {
+    width: 20%;
+    height: 20px;
+    margin: 0 5px 0 5px;
+    text-align: center;
+}
+
+.poista {
+    background-color: red;
+    margin: auto;
+}
+
+#filleri {
+    border: none;
+}
+
+#nappi-filleri {
+    border: none;
+    background-color: beige;
+}
+
+#kehoitus { 
+    padding-top: 20px;
+    font-style: italic;
+    color: black;
+    font-size: x-large;
+    font-weight: bold;
+    text-shadow: 0 0 20px gold;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.solid {
+    width: 90%;
+    border: 1px solid;
+    border-color: black;
+}
+
+h1 {
     text-align: center;
     font-style: italic;
     color: rgb(0, 0, 0);
@@ -91,176 +155,133 @@ a {
     text-shadow: 0 0 20px gold;
     font-family:Georgia, 'Times New Roman', Times, serif;
     text-decoration: underline;
+    padding: 20px 0 0 0;
 }
 
-.teksti-ja-kuva {
+.toimitustiedot {
+    width: 50%;
+    margin: 30px auto;
+}
+
+.rivi {
     display: flex;
+    justify-content: space-evenly;
+    margin: 10px auto;
 }
 
-#kuva1 {
-    border-radius: 30%;
-    width: 40%;
-    height: auto;
-    margin: 0 40px;
-}
-
-.sektio1 {
-    width: 75%;
-    margin: auto;
-    margin-bottom: 20px;
-}
-
-.fieldi {
-    background-color: rgb(255, 198, 133);
-    border-color: rgb(255, 153, 0);
-}
-
-#quote {
-    font-style: italic;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    width: 100%;
-    background-color: red;
-    text-align: center;
-    margin: 0;
-    padding: 20px;
-    color: rgb(255, 153, 0);
-    text-shadow: gold;
-}
-
-#kuva2 {
-    width: 100%;
-    height: auto;
-}
-
-.arvostelut {
-    width: 75%;
-    height: auto;
-    background-color: rgb(255, 198, 133);
-    margin: auto;
-}
-
-.keskelle {
-    margin: auto;
-    display: flex;
+.rivi label {
+    width: 25%;
     text-align: center;
 }
 
-#tahdet {
-    width: 100%;
+.rivi input {
+    width: 140px;
 }
 
-#arvostelut-h1 {
-    text-align: center;
-    text-decoration: underline;
-    font-style: italic;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-}
-
-.arvostelu {
-    margin: 10px 0px;
-    font-style: italic;
-}
-
-.arvostelut-container {
-    height: auto;
-    display: flex;
-    justify-content: space-around;
-}
-
-.arvostelut-container ul {
-    max-width: 30%;
-}
-
-.ceo {
-    display: flex;
-    background-color: rgb(255, 198, 133);
-    margin: auto;
-    justify-content: space-around;
-}
-
-.sektio3 {
-    height: auto;
-    width: 75%;
+#nappi {
     margin: 20px auto;
+    width: 100px;
+    height: 50px;
+    border-radius: 10%;
 }
 
-#johtaja {
-    border-radius: 50%;
-    width: 40%;
-    height: auto;
-    margin: 20px;
-
-}
-
-.field-teksti {
-    background-color: rgb(255, 218, 176)
-}
-
-#huomio {
-    font-size: x-large;
-    color: red;
-    text-decoration: underline;
-    font-weight: bold;
+p {
     text-align: center;
 }
+
 
 @media screen and (max-width: 800px) {
 
     .sarake {
-        font-size: large;
-    }
-
-    .arvostelut-container {
-        flex-direction: column;
-    }
-
-    .arvostelut-container ul {
-        max-width: 100%; 
-        margin: 0 0;
-        }
-
-    #arvostelut-h1 {
-        font-size: x-large;
-    }
-    
-    .sektio1, .arvostelut, .sektio3 {
-        width: 100%;
-    }
-
-}
-
-@media screen and (max-width: 500px) {
-    .sarake {
         font-size: small;
     }
 
-    #arvostelut-h1 {
-        font-size: large;
-    }
-
-    .teksti-ja-kuva {
-        flex-direction: column-reverse;
-    }
-
-    #kuva1 {
-        width: 80%;
-        height: auto;
-        margin: 20px auto;
-    }
-
-    #johtaja {
+    #tausta {
         width: 100%;
-        height: auto;
         border-radius: 0;
-        margin: 0 auto 10px auto;
     }
 
-    .esittely p {
+    .solid {
+        width: 0;
+    }
+
+    .sisältö {
+        width: 100%;
+    }
+
+    .poista {
+        margin-right: 20px;
+    }
+
+    .rivi {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .rivi input {
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+    .rivi label {
+        margin: auto;
+    }
+
+    p {
+        width: 90%;
         text-align: center;
+        margin: 10px auto;
     }
 
-    #etusivukuva {
-        height: 400px;
+    h1 {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    #vihanaama {
+        width: 100%;
+    }
+
+    .tuote {
+        height: 75px;
+        justify-content: space-evenly;
+    }
+
+    .tuote p {
+        font-size: small;
+    }
+
+    #filleri {
+        width: 0;
+    }
+
+    #tyhjap {
+        width: 0;
+    }
+
+    #pyht {
+        width: 33%;
+    }
+
+    #tuoteyht {
+        width: 33%;
+    }
+
+    #hintayht {
+        width: 33%;
+    }
+
+    .tuotehinta {
+        width: auto;
+        text-align: left;
+    }
+
+    .tuotemaara {
+        width: auto;
+        margin: auto 0;
+    }
+
+    .hinta {
+        width: auto;
     }
 }
-
