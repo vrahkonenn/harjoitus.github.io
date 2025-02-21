@@ -150,11 +150,31 @@ a {
     .sarake {
         font-size: medium;
     }
+
+    .rivi {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .tuote-container {
+        width: 75%;
+        margin: 20px auto;
+    }
 }
 
 @media screen and (max-width: 500px) {
 
     .sarake {
         font-size: small;
+    }
+
+    .rivi {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .tuote-container {
+        width: 75%;
+        margin: 20px auto;
     }
 }
