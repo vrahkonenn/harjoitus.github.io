@@ -172,4 +172,30 @@ a {
     .sarake {
         font-size: small;
     }
+
+    #tausta {
+        width: 100%;
+    }
+
+    .rivi {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .palaute-osa {
+        width: 60%;
+    }
+
+    .rivi input {
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+    .rivi label {
+        margin: auto;
+    }
+
+    .buttonit input {
+        margin-right: 20px;
+    }
 }
