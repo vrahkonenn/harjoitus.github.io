@@ -82,12 +82,7 @@ a {
     margin: 20px auto;
 }
 
-.vasen-osa {
-    width: 50%;
-    margin: auto;
-} 
-
-.vasen-osa h1, .sektio3 h1, .arvostelut h1 {
+.fieldi h1, .sektio3 h1, .arvostelut h1 {
     text-align: center;
     font-style: italic;
     color: rgb(0, 0, 0);
@@ -98,25 +93,15 @@ a {
     text-decoration: underline;
 }
 
-.teksti-osa {
-    text-align: center;
-    width: 100%;
-    margin: auto;
-    font-size: large;
-}
-
-.kuva-osa {
-    width: 50%;
-    height: auto;
+.teksti-ja-kuva {
     display: flex;
-    justify-content: center;
 }
 
 #kuva1 {
     border-radius: 30%;
-    width: 90%;
+    width: 40%;
     height: auto;
-    margin: auto;
+    margin: 0 40px;
 }
 
 .sektio1 {
@@ -201,18 +186,10 @@ a {
 
 #johtaja {
     border-radius: 50%;
-    height: 30vw;
-    width: auto;
-
-}
-
-.bio {
     width: 40%;
-}
+    height: auto;
+    margin: 20px;
 
-.bio p {
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    font-size: large;
 }
 
 .field-teksti {
@@ -249,6 +226,7 @@ a {
     .sektio1, .arvostelut, .sektio3 {
         width: 100%;
     }
+
 }
 
 @media screen and (max-width: 500px) {
@@ -256,21 +234,33 @@ a {
         font-size: small;
     }
 
-    .arvostelut-container {
-        flex-direction: column;
-    }
-
-    .arvostelut-container ul {
-        max-width: 100%; 
-        margin: 0 0;
-        }
-
     #arvostelut-h1 {
         font-size: large;
     }
-    
-    .sektio1, .arvostelut, .sektio3 {
+
+    .teksti-ja-kuva {
+        flex-direction: column-reverse;
+    }
+
+    #kuva1 {
+        width: 80%;
+        height: auto;
+        margin: 20px auto;
+    }
+
+    #johtaja {
         width: 100%;
+        height: auto;
+        border-radius: 0;
+        margin: 0 auto 10px auto;
+    }
+
+    .esittely p {
+        text-align: center;
+    }
+
+    #etusivukuva {
+        height: 400px;
     }
 }
 
