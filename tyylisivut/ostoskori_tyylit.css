@@ -249,4 +249,33 @@ p {
     .tuote p {
         font-size: small;
     }
+
+     #filleri {
+        width: 0;
+    }
+
+    #tyhjap {
+        width: 0;
+    }
+
+    #pyht {
+        width: 33%;
+    }
+
+    #tuoteyht {
+        width: 33%;
+    }
+
+    #hintayht {
+        width: 33%;
+    }
+
+    .tuotehinta {
+        width: auto;
+        text-align: left;
+    }
+
+    .tuotemaara {
+        width: auto;
+    }
 }
