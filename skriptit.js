@@ -29,7 +29,7 @@ function paivitaHinta(hinta, maara, tuoteID, tuote) {
 
     let uusihinta = parseFloat(hinta)*parseInt(maara);
 
-    document.getElementById(tuoteID).innerHTML = "= " + uusihinta.toFixed(2) + " €";
+    document.getElementById(tuoteID).innerHTML = uusihinta.toFixed(2) + " €";
     paivitaYhteensa();
 }
 
@@ -112,7 +112,7 @@ function paivitaKori(){
         + '<input class="input-field" id="maitomaara" value="' + tiedot[1] + '" onchange="paivitaHinta(`3.45`, document.getElementById(`maitomaara`).value, `1`, `maitomaara`);">'
         + `<button onclick="muuta_tuote_amount('maitomaara', document.getElementById('maitomaara').value, 1); paivitaHinta('3.45', document.getElementById('maitomaara').value, '1',); lisaa_koriin('maito', '3.45', document.getElementById('maitomaara').value);">+</button>`
         + '</div>'
-        + '<p class="hinta" id="1">= ' + (parseFloat(tiedot[0])*parseInt(tiedot[1])).toFixed(2) +'€</p>'
+        + '<p class="hinta" id="1">' + (parseFloat(tiedot[0])*parseInt(tiedot[1])).toFixed(2) +'€</p>'
         + `<button class="poista" onclick="poista_tuote('maito');">X</button>`
 
         document.getElementById('tuote_maito').innerHTML = tuloste   
@@ -131,7 +131,7 @@ function paivitaKori(){
         + '<input class="input-field" id="kivimaara" value="' + tiedot[1] + '" onchange="paivitaHinta(`99.5`, document.getElementById(`kivimaara`).value, `2`, `kivimaara`);">'
         + `<button onclick="muuta_tuote_amount('kivimaara', document.getElementById('kivimaara').value, 1); paivitaHinta('99.5', document.getElementById('kivimaara').value, '2'); lisaa_koriin('kivi', '99.95', document.getElementById('kivimaara').value);">+</button>`
         + '</div>'
-        + '<p class="hinta" id="2">= ' + (parseFloat(tiedot[0])*parseInt(tiedot[1])).toFixed(2) +' €</p>'
+        + '<p class="hinta" id="2">' + (parseFloat(tiedot[0])*parseInt(tiedot[1])).toFixed(2) +' €</p>'
         + `<button class="poista" onclick="poista_tuote('kivi');">X</button>`
 
         document.getElementById('tuote_kivi').innerHTML = tuloste   
@@ -150,7 +150,7 @@ function paivitaKori(){
         + '<input class="input-field" id="puhelinmaara" value="' + tiedot[1] + '" onchange="paivitaHinta(`12.30`, document.getElementById(`puhelinmaara`).value, `3`, `puhelinmaara`);">'
         + `<button onclick="muuta_tuote_amount('puhelinmaara', document.getElementById('puhelinmaara').value, 1); paivitaHinta('12.30', document.getElementById('puhelinmaara').value, '3'); lisaa_koriin('puhelin', '12.30', document.getElementById('puhelinmaara').value);"">+</button>`
         + '</div>'
-        + '<p class="hinta" id="3">= ' + (parseFloat(tiedot[0])*parseInt(tiedot[1])).toFixed(2) +' €</p>'
+        + '<p class="hinta" id="3">' + (parseFloat(tiedot[0])*parseInt(tiedot[1])).toFixed(2) +' €</p>'
         + `<button class="poista" onclick="poista_tuote('puhelin');">X</button>`
 
         document.getElementById('tuote_puhelin').innerHTML = tuloste   
@@ -169,7 +169,7 @@ function paivitaKori(){
         + '<input class="input-field" id="kaljamaara" value="' + tiedot[1] + '" onchange="paivitaHinta(`5.00`, document.getElementById(`kaljamaara`).value, `4`, `kaljamaara`);">'
         + `<button onclick="muuta_tuote_amount('kaljamaara', document.getElementById('kaljamaara').value, 1); paivitaHinta('5.00', document.getElementById('kaljamaara').value, '4');  lisaa_koriin('kalja', '5.00', document.getElementById('kaljamaara').value);">+</button>`
         + '</div>'
-        + '<p class="hinta" id="4">= ' + (parseFloat(tiedot[0])*parseInt(tiedot[1])).toFixed(2) +' €</p>'
+        + '<p class="hinta" id="4">' + (parseFloat(tiedot[0])*parseInt(tiedot[1])).toFixed(2) +' €</p>'
         + `<button class="poista" onclick="poista_tuote('kalja');">X</button>`
 
         document.getElementById('tuote_kalja').innerHTML = tuloste   
@@ -188,7 +188,7 @@ function paivitaKori(){
         + '<input class="input-field" id="viivoitinmaara" value="' + tiedot[1] + '" onchange="paivitaHinta(`0.50`, document.getElementById(`viivoitinmaara`).value, `5`, `viivoitinmaara`);">'
         + `<button onclick="muuta_tuote_amount('viivoitinmaara', document.getElementById('viivoitinmaara').value, 1); paivitaHinta('0.50', document.getElementById('viivoitinmaara').value, '5'); lisaa_koriin('viivoitin', '0.50', document.getElementById('viivoitinmaara').value);">+</button>`
         + '</div>'
-        + '<p class="hinta" id="5">= ' + (parseFloat(tiedot[0])*parseInt(tiedot[1])).toFixed(2) +' €</p>'
+        + '<p class="hinta" id="5">' + (parseFloat(tiedot[0])*parseInt(tiedot[1])).toFixed(2) +' €</p>'
         + `<button class="poista" onclick="poista_tuote('viivoitin');">X</button>`
 
         document.getElementById('tuote_viivoitin').innerHTML = tuloste   
@@ -207,7 +207,7 @@ function paivitaKori(){
         + '<input class="input-field" id="taksarimaara" value="' + tiedot[1] + '" onchange="paivitaHinta(`1.00`, document.getElementById(`taksarimaara`).value, `6`, `taksarimaara`);">'
         + `<button onclick="muuta_tuote_amount('taksarimaara', document.getElementById('taksarimaara').value, 1); paivitaHinta('1.00', document.getElementById('taksarimaara').value, '6'); lisaa_koriin('taksari', '1.00', document.getElementById('taksarimaara').value);">+</button>`
         + '</div>'
-        + '<p class="hinta" id="6">= ' + (parseFloat(tiedot[0])*parseInt(tiedot[1])).toFixed(2) +' €</p>'
+        + '<p class="hinta" id="6">' + (parseFloat(tiedot[0])*parseInt(tiedot[1])).toFixed(2) +' €</p>'
         + `<button class="poista" onclick="poista_tuote('taksari');">X</button>`
 
         document.getElementById('tuote_taksari').innerHTML = tuloste   
@@ -226,7 +226,7 @@ function paivitaKori(){
         + '<input class="input-field" id="automaara" value="' + tiedot[1] + '" onchange="paivitaHinta(`12000`, document.getElementById(`automaara`).value, `7`, `automaara`);">'
         + `<button onclick="muuta_tuote_amount('automaara', document.getElementById('automaara').value, 1); paivitaHinta('12000', document.getElementById('automaara').value, '7'); lisaa_koriin('auto', '12000', document.getElementById('automaara').value);">+</button>`
         + '</div>'
-        + '<p class="hinta" id="7">= ' + (parseFloat(tiedot[0])*parseInt(tiedot[1])).toFixed(2) +' €</p>'
+        + '<p class="hinta" id="7">' + (parseFloat(tiedot[0])*parseInt(tiedot[1])).toFixed(2) +' €</p>'
         + `<button class="poista" onclick="poista_tuote('auto');">X</button>`
 
         document.getElementById('tuote_auto').innerHTML = tuloste;   
@@ -245,7 +245,7 @@ function paivitaKori(){
         + '<input class="input-field" id="sohvamaara" value="' + tiedot[1] + '" onchange="paivitaHinta(`7500`, document.getElementById(`sohvamaara`).value, `8`, `sohvamaara`);">'
         + `<button onclick="muuta_tuote_amount('sohvamaara', document.getElementById('sohvamaara').value, 1); paivitaHinta('7500', document.getElementById('sohvamaara').value, '8'); lisaa_koriin('sohva', '7500', document.getElementById('sohvamaara').value);">+</button>`
         + '</div>'
-        + '<p class="hinta" id="8">= ' + (parseFloat(tiedot[0])*parseInt(tiedot[1])).toFixed(2) +' €</p>'
+        + '<p class="hinta" id="8">' + (parseFloat(tiedot[0])*parseInt(tiedot[1])).toFixed(2) +' €</p>'
         + `<button class="poista" onclick="poista_tuote('sohva');">X</button>`
 
         document.getElementById('tuote_sohva').innerHTML = tuloste   
@@ -264,7 +264,7 @@ function paivitaKori(){
         + '<input class="input-field" id="lamppumaara" value="' + tiedot[1] + '" onchange="paivitaHinta(`50.00`, document.getElementById(`lamppumaara`).value, `9`, `lamppumaara`);">'
         + `<button onclick="muuta_tuote_amount('lamppumaara', document.getElementById('lamppumaara').value, 1); paivitaHinta('50.00', document.getElementById('lamppumaara').value, '9'); lisaa_koriin('lamppu', '50.00', document.getElementById('lamppumaara').value);">+</button>`
         + '</div>'
-        + '<p class="hinta" id="9">= ' + (parseFloat(tiedot[0])*parseInt(tiedot[1])).toFixed(2) +' €</p>'
+        + '<p class="hinta" id="9">' + (parseFloat(tiedot[0])*parseInt(tiedot[1])).toFixed(2) +' €</p>'
         + `<button class="poista" onclick="poista_tuote('lamppu');">X</button>`
 
         document.getElementById('tuote_lamppu').innerHTML = tuloste   
