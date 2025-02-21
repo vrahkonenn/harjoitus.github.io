@@ -201,4 +201,46 @@ p {
     .sarake {
         font-size: small;
     }
+
+    #tausta {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .solid {
+        width: 0;
+    }
+
+    .sisältö {
+        width: 100%;
+    }
+
+    .poista {
+        margin-right: 20px;
+    }
+
+    .rivi {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .rivi input {
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+    .rivi label {
+        margin: auto;
+    }
+
+    p {
+        width: 90%;
+        text-align: center;
+        margin: 10px auto;
+    }
+
+    h1 {
+        width: 80%;
+        margin: 0 auto;
+    }
 }
