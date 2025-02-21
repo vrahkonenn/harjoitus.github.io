@@ -268,7 +268,7 @@ p {
     .tuotehinta {
         width: auto;
         text-align: left;
-        margin: auto 0 auto 5px
+        margin: auto 0 auto 10px
     }
 
     .tuotemaara {
@@ -280,7 +280,6 @@ p {
     .hinta {
         width: auto;
         text-align: left;
-        flex-wrap: nowrap;
     }
 
 
