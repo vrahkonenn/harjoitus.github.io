@@ -245,4 +245,8 @@ p {
     .tuote {
         height: 75px;
     }
+
+    .tuote p {
+        font-size: small;
+    }
 }
