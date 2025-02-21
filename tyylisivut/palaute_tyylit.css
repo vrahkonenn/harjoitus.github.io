@@ -160,14 +160,8 @@ a {
     border-radius: 10%;
 }
 
+
 @media screen and (max-width: 800px) {
-
-    .sarake {
-        font-size: medium;
-    }
-}
-
-@media screen and (max-width: 500px) {
 
     .sarake {
         font-size: small;
