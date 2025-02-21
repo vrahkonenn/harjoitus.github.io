@@ -85,12 +85,12 @@ function paivitaYhteensa() {
     if (!localStorage.getItem('maito') && !localStorage.getItem('kivi') && !localStorage.getItem('puhelin') && !localStorage.getItem('kalja') && !localStorage.getItem('viivoitin') && !localStorage.getItem('taksari') && !localStorage.getItem('auto') && !localStorage.getItem('sohva') && !localStorage.getItem('lamppu')) {
         document.getElementById('yhteensa').innerHTML = '';
         document.getElementById('otsikko').innerHTML = '';
-        document.getElementById('tyhja').innerHTML = '<h1>VAI ETTÄ OSTOSKORISI ON TYHJÄ!</h1><h2 id="kehoitus">OSTOKSILLE SIITÄ!</h2><img src="../kuvat/vihainen2.png">'
+        document.getElementById('tyhja').innerHTML = '<h1>VAI ETTÄ OSTOSKORISI ON TYHJÄ!</h1><h2 id="kehoitus">OSTOKSILLE SIITÄ!</h2><img src="../kuvat/vihainen2.png" id="vihanaama">'
 
     } else {
         tuloste = '<img src="../kuvat/filleri.png" class="tuotekuva" id="filleri">'
-        + '<p></p>'
-        + '<p>Yhteensä: </p>'
+        + '<p id="tyhjap"></p>'
+        + '<p id="pyht">Yhteensä: </p>'
         + '<p id="tuoteyht">' + tuotemaarat + ' tuotetta</p>'
         + '<p id="hintayht">= ' + hintayht.toFixed(2) + ' €</p>'
         + '<button class="poista" id="nappi-filleri"></button>'
